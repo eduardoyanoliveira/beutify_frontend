@@ -1,10 +1,17 @@
 import styled, { css } from "styled-components";
 
+interface IHeaderMenuProps {
+    margin?: string
+}
 
-export const HeaderMenu = styled.ul`
-display: flex;
-justify-content: space-between;
-align-items: center;
+export const HeaderMenu = styled.ul<IHeaderMenuProps>`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ${({margin}) => css`
+        margin: ${margin};
+    `};
 `; 
 
 export const MenuItem = styled.li`
@@ -23,5 +30,7 @@ export const MenuItem = styled.li`
             color: ${theme.colors.primary} ;
         `};
     };
+
+    cursor: pointer;
 
 `;

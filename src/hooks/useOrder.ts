@@ -59,9 +59,8 @@ function useOrder(order: IOrder) {
         };
 
         const newOrder = {
-            id: current.id,
-            customer: current.customer,
-            service: current.service,
+            customer: current.customer.id,
+            service: current.service.id,
             schedule_date: current.schedule_date
         }
 
@@ -71,8 +70,11 @@ function useOrder(order: IOrder) {
                 alert('Ordem de serviço alterada com sucesso');
                 window.location.reload();
             }else{
+                console.log(newOrder)
                 await axiosInstance().post('orders/', { 
-                    newOrder
+                    customer: current.customer.id,
+                    service: current.service.id,
+                    schedule_date: current.schedule_date
                 });
                 alert('Ordem de serviço cadastrada com sucesso');
                 window.location.reload();

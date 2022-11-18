@@ -5,7 +5,11 @@ import { BiExit } from 'react-icons/bi';
 
 import UserPhoto from '../../UserPhoto';
 
-function AppHeaderMenu() {
+interface IProps {
+    margin?: string
+}
+
+function AppHeaderMenu({margin}: IProps) {
 
     const navigate = useNavigate();
 
@@ -19,7 +23,7 @@ function AppHeaderMenu() {
     const user = JSON.parse(localStorage.getItem('@user') as string);
 
     return (
-        <HeaderMenu>
+        <HeaderMenu margin={margin}>
             <MenuItem>
                 <UserPhoto 
                     photoUrl={user.image as string} 

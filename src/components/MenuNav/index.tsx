@@ -26,7 +26,7 @@ const MenuNav: React.FC = () => {
                 </MenuBarsContainer>
                 {
                     !isDesktop && (<AppHeaderMenu/>)
-                }
+                } 
                 {
                     (open || isDesktop) && <Menu fn={toggleMenu}/>
                 }

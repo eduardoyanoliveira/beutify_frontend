@@ -29,8 +29,6 @@ function OrderRegisterPage() {
        resetForm
     } = useOrder(order as IOrder);
 
-    console.log(current)
-
     return (
         <Form title='Ordem de Serviço'>
             <FormContainer>
