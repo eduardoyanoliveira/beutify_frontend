@@ -15,7 +15,7 @@
 
 1º clone this repository:  
 
-``` git clone https://github.com/eduardoyanoliveira/nebula-web-application ```
+``` git clone https://github.com/eduardoyanoliveira/beutify_frontend.git ```
 
 2º Install the node packages: Open the repository on a command prompt and execute the following command.
 
